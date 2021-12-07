@@ -71,8 +71,8 @@ document.addEventListener("mouseup", () => {
 });
 
 function startDraw(e) {
-  var x = e.clientX - rect.left; //x position within the element.
-  var y = e.clientY - rect.top;
+  var x = e.clientX; //x position within the element.
+  var y = e.clientY;
   ctx.beginPath();
   ctx.moveTo(x, y);
   painting = true;
@@ -80,8 +80,8 @@ function startDraw(e) {
   console.log(painting);
 }
 function draw(e) {
-  var x = e.clientX - rect.left; //x position within the element.
-  var y = e.clientY - rect.top;
+  var x = e.clientX; //x position within the element.
+  var y = e.clientY;
   ctx.lineTo(x, y);
 
   ctx.lineWidth = thickness;
